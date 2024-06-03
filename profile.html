@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="balanceControl.js"></script>
+
+    <title>Profile - VPN SKY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="profileManagement.js"></script>
+    <header>
+        <h1>VPN SKY</h1>
+        <p>Manage your profile and settings.</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="plans.html">Plans</a>
+        <a href="history.html">History</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+    <div class="container">
+        <h2>Your Profile</h2>
+    
+        <section class="balance">
+            <h3>Your Balance: <span id="userBalance">$0.00</span></h3>
+            <label for="currency">Choose currency:</label>
+            <select id="currency">
+                <option value="RUB">RUB</option>
+                <option value="EUR">EUR</option>
+                <option value="USD">USD</option>
+            </select>
+            <button onclick="topUp()">Top Up</button>
+        </section>
+        
+        <div id="topUpForm" style="display:none;">
+            <h3>Top Up Your Balance</h3>
+            <input type="number" id="topUpAmount" placeholder="Enter amount" />
+            <button onclick="processTopUp()">Submit</button>
+        </div>
+    </div>
+
+    <div id="topUpForm" style="display:none;">
+        <h3>Top Up Your Balance</h3>
+        <label for="topUpMethod">Payment Method:</label>
+        <select id="topUpMethod">
+            <option value="creditCard">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="crypto">Cryptocurrency</option>
+            <option value="bankTransfer">Bank Transfer</option>
+        </select>
+        <input type="number" id="topUpAmount" placeholder="Enter amount" />
+        <button onclick="processTopUp()">Submit</button>
+    </div>
+    
+    <script>
+        function topUp() {
+            document.getElementById('topUpForm').style.display = 'block';
+        }
+
+        function processTopUp() {
+            var amount = document.getElementById('topUpAmount').value;
+            var currency = document.getElementById('currency').value;
+            alert('You topped up ' + amount + ' ' + currency); // Заглушка
+            document.getElementById('topUpForm').style.display = 'none';
+        }
+    </script>
+
+<label for="language-select">Choose language:</label>
+<select id="language-select" onchange="changeLanguage()">
+    <option value="en">English</option>
+    <option value="ru">Русский</option>
+</select>
+
+</body>
+</html>

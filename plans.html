@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plans - VPN SKY</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>VPN SKY</h1>
+        <p>Choose your VPN plan.</p>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="plans.html">Plans</a>
+        <a href="history.html">History</a>
+        <a href="profile.html">Profile</a>
+    </nav>
+    <div class="container">
+        <h2>Available Plans</h2>
+        <div class="plan">
+            <h3>Basic Plan</h3>
+            <p>Price: $5/month</p>
+            <p>Duration: 1 month</p>
+            <p>Data: 10GB</p>
+            <button class="btn buy" onclick="buyNow('Basic Plan', 5)">Buy Now</button>
+        </div>
+        <div class="plan">
+            <h3>Premium Plan</h3>
+            <p>Price: $15/month</p>
+            <p>Duration: 1 month</p>
+            <p>Data: 50GB</p>
+            <button class="btn buy" onclick="buyNow('Premium Plan', 15)">Buy Now</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
